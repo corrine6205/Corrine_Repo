@@ -1,0 +1,66 @@
+#Example 1
+
+> s3<-list(name="Taylor Swift",age=34,job="singer")
+> s3
+$name
+[1] "Taylor Swift"
+
+$age
+[1] 34
+
+$job
+[1] "singer"
+
+> print(s3)
+$name
+[1] "Taylor Swift"
+
+$age
+[1] 34
+
+$job
+[1] "singer"
+
+> setClass("entertainer",representation(name="character",age="numeric",job="character"))
+> s4<-new("entertainer",name="Taylor Swift",age=34,job="singer")
+> s4
+An object of class "entertainer"
+Slot "name":
+[1] "Taylor Swift"
+
+Slot "age":
+[1] 34
+
+Slot "job":
+[1] "singer"
+
+> isS4(s3)
+[1] FALSE
+> isS4(s4)
+[1] TRUE
+
+#Example 2
+
+> s3<-list(name="Scream",year=1996,genre="Horror")
+> s3
+$name
+[1] "Scream"
+
+$year
+[1] 1996
+
+$genre
+[1] "Horror"
+
+> setClass("movie",representation(name="character",year="numeric",genre="character"))
+> s4<-new("movie",name="Scream",year=1996,genre="Horror")
+> s4
+An object of class "movie"
+Slot "name":
+[1] "Scream"
+
+Slot "year":
+[1] 1996
+
+Slot "genre":
+[1] "Horror"
