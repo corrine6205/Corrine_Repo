@@ -1,0 +1,10 @@
+#import dataset (https://vincentarelbundock.github.io/Rdatasets/csv/DAAG/whoops.csv)#
+> cough <- read.csv("~/Desktop/cough.csv")
+>   View(cough)
+> install.packages("lattice")
+> library(lattice)
+> install.packages("ggplot2")
+> library(ggplot2)
+> hist(cough$wcough, main="Deaths From Whooping Cough from 1740-1881 Frequency", xlab="Deaths From Whooping Cough", ylab="Frequency", col="purple")
+> dotplot(~ratio, data=cough, main="Ratio of Whooping Cough Deaths vs. Total Deaths in London From 1740-1881", xlab="Ratio of Whooping Cough Deaths Vs. Total Deaths", col="purple")
+> ggplot(data=cough, aes(x=wcough, y=alldeaths)) + geom_point() + labs(x="Whooping Cough Deaths", y="Total Deaths", title="Whooping Cough Deats Vs. Total Deaths in London (1740-1881)")
