@@ -1,0 +1,10 @@
+Package: soccerstat
+Type: Package
+Title: Soccer Statistics Calculator
+Version: 0.0.0.9000
+Author: Corrine Costello <corrinec@usf.edu>
+Description: Creates averages of differnet statistics of soccer players across a season
+Depends: R (>= 3.1.2)
+License: CC0
+Encoding: UTF-8
+LazyData: true
