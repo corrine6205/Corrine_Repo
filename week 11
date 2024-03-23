@@ -1,0 +1,45 @@
+#Debug the following code
+
+tukey_multiple <- function(x) {
+  outliers <- array(TRUE,dim=dim(x))
+  for (j in 1:ncol(x))
+  {
+    outliers[,j] <- outliers[,j] && tukey.outlier(x[,j])
+  }
+  outlier.vec <- vector(length=nrow(x))
+  for (i in 1:nrow(x))
+  { outlier.vec[i] <- all(outliers[i,]) } return(outlier.vec) }
+
+#Bug on line 7
+#Change outliers[,j] <- outliers[,j] && tukey.outlier(x[,j]) to outliers[,j] <- outliers[,j] & tukey.outlier(x[,j])
+
+#Recieve the following error
+
+Error: unexpected symbol in:
+"  for (i in 1:nrow(x))
+  { outlier.vec[i] <- all(outliers[i,]) } return"
+
+#Bug on line 10
+
+#Change  for (i in 1:nrow(x))
+  { outlier.vec[i] <- all(outliers[i,]) } return(outlier.vec) } to 
+for (i in 1:nrow(x)) {
+    outlier.vec[i] <- all(outliers[i, ])
+  }
+  return(outlier.vec)
+}
+
+#Final Correct Code
+
+tukey_multiple <- function(x) {
+  outliers <- array(TRUE,dim=dim(x))
+  for (j in 1:ncol(x))
+  {
+    outliers[,j] <- outliers[,j] && tukey.outlier(x[,j])
+  }
+  outlier.vec <- vector(length=nrow(x))
+  for (i in 1:nrow(x)) {
+    outlier.vec[i] <- all(outliers[i, ])
+  }
+  return(outlier.vec)
+}
