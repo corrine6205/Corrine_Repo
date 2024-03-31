@@ -1,0 +1,64 @@
+#import dataset 
+```{r goals}
+mean(goals)
+```
+```{r goals, echo = false}
+plot(goals)
+```
+
+```{r assists}
+mean(assists)
+```{r assists, echo = false}
+plot(assists)
+```
+
+```{r shots}
+mean(shots)
+```
+```{r shots, echo = false}
+plot(shots)
+```
+
+```{r shots_on_target}
+mean(shots_on_target)
+```
+```{r shots_on_target, echo = false}
+plot(shots_on_target)
+```
+
+```{r fouls_commited}
+mean(fouls_commited)
+```
+```{r fouls_commited, echo = false}
+plot(fouls_commited)
+```
+
+```{r fouls_suffered}
+mean(fouls_suffered)
+```
+```{r fouls_suffered, echo = false}
+plot(fouls_suffered)
+```
+
+```{r offsides}
+mean(offsides)
+```
+```{r offsides, echo = false}
+plot(offsides)
+```
+
+```{r yellow_cards}
+mean(yellow_cards)
+```
+```{r yellow_cards, echo = false}
+plot(yellow_cards)
+```
+
+```{r red_cards}
+mean(red_cards)
+```
+```{r red_cards, echo = false}
+plot(red_cards)
+```
+
+attach(Alex.Morgan.Stats)
